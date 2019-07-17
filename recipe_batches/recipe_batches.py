@@ -12,10 +12,12 @@ def recipe_batches(recipe, ingredients):
         if recipe[item] <= ingredients[item]:
 
             b = ingredients[item]//recipe[item]
-            print(b, item)
+
             if b < batches:
                 batches = b
     return batches
+
+# first pass: O(n) right now, but can be optimized by reducing dict lookups and computations somehow?
 
 
 if __name__ == '__main__':
