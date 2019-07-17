@@ -46,6 +46,9 @@ def find_max_profit(prices):
 
 
 print(find_max_profit([10, 7, 5, 8, 11, 9]))
+# O(n**2)
+# come back and reduce to O(n)?
+
 
 if __name__ == '__main__':
     # This is just some code to accept inputs from the command line
