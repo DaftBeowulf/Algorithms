@@ -54,8 +54,12 @@ def eating_cookies(n, cache=[]):
 
     return cache[n]
 
+# O(n) since each possible eating_cookies(n) only gets run once for each value of n
+# possible ways to improve: an iterative solution, or a bottom-up iterative solution?
+
 
 print("there are", eating_cookies(0), "ways of eating the cookies")
+
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
