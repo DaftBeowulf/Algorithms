@@ -42,10 +42,14 @@ iteratively:
 def making_change(amount, denominations, cache=[]):
     # first value a 0 index needs to be 1, won't be hit in for loops
     cache = [1]+[0 for i in range(amount)]
-    for coin in denominations:
-        for higher_amount in range(coin, amount+1):
+    for coin in denominations:  # O(5)
+        for higher_amount in range(coin, amount+1):  # O(n)
             cache[higher_amount] += cache[higher_amount-coin]
     return cache[amount]
+
+# O(5n)->O(n) for current restrictions on denominations
+# BUT
+# if denomination list of greater amounts k passed in, O(k*n)
 
 
 denominations = [1, 5, 10, 25, 50]
