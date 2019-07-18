@@ -58,7 +58,7 @@ def eating_cookies(n, cache=[]):
 # possible ways to improve: an iterative solution, or a bottom-up iterative solution?
 
 
-print("there are", eating_cookies(0), "ways of eating the cookies")
+print("there are", eating_cookies(4), "ways of eating the cookies")
 
 
 if __name__ == "__main__":
